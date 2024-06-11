@@ -1,0 +1,56 @@
+@charset "ISO-8859-1";
+
+*{
+    margin: 0;
+}
+
+html, body{
+    height: 100%;
+    display: inline;
+    justify-content: center;
+    align-items: center;
+}
+
+#form{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -60px;
+}
+
+#form1{
+    font-style: italic;
+    display: flex;
+    background-color: rgb(63, 192, 244);
+    justify-content: center;
+    text-align: left;
+    height: auto;
+    width: auto;
+    padding: 30px;
+}
+
+table{
+    height: 200px;
+    width: 350px;
+}
+
+#labels{
+    color: rgb(17, 9, 109);
+    font-style: italic;
+    margin-top: 50px;
+    font-style: roboto;
+    font-size: 20px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(right,white,rgb(151, 239, 239),white);
+}
+
+#button{
+    height: 30px;
+    font-size: 15px;
+    background-color:  rgb(224, 245, 245);
+    border: none;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px black;
+    width: 70px;
+}
