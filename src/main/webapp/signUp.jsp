@@ -35,7 +35,7 @@
                         <tr style="text-align: center;">
                             <td colspan="2"><input type="submit" value="SignUp" name="submit" id="button">
                             <input type="Reset" value="Reset " name="Reset" id="button">
-                            <input type="submit" value="Back" name="back" id="button" onclick="window.location.href='Main.jsp'"></td>
+                            <input type="submit" value="Back" name="back" id="button" onclick="window.location.href='index.jsp'"></td>
                         </tr>
 
                     </table>        

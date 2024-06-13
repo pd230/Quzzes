@@ -9,11 +9,12 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import entity.HibUtilQuiz;
-import entity.UserData;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Login
@@ -24,26 +25,30 @@ public class Login extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		String username = request.getParameter("Uname");
+		String Uname = request.getParameter("Uname");
 		String password = request.getParameter("password");
 		
 		
 		Session session = HibUtilQuiz.getSessionFactory().openSession();
 		Transaction tx = session.getTransaction();
 		
-		String sql = "Select password,Uname,id from UserData";
+		String sql = " from UserData where Uname = :Uname  and password = :password";
 		Query query = session.createQuery(sql);
+		query.setParameter("Uname", Uname);
+		query.setParameter("password", password);
+		
 		List<Object[]> list = query.list();
 		
-		for(Object[] i:list) {
-			while(username.matches((String) i[0]) && password.matches((String) i[1]));
-			{
-				out.println("successful ! ");
-				out.println();
-				out.println(i[0]+" "+i[1]+" "+i[2]);
-				break;
-			}
-		}
+		HttpSession httpsession = request.getSession();
+		
+		
+//        if(list != null){
+//        	httpsession.setAttribute("Uname", Uname);
+//        	httpsession.setAttribute("password", password);
+//        	response.sendRedirect("Home.jsp");
+//        }else {
+//        	response.sendRedirect("Login.jsp?error=1");
+//        }
 		
 	}
 
