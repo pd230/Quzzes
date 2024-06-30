@@ -20,14 +20,14 @@
                     <table>
                         <tr>
                             <th><label>Enter Username:</label></th>
-                            <td><input type="text" name="Uname" required></td>
+                            <td><input type="text" name="Uname" required title="Enter valid Username"></td>
                         </tr>
                         <tr>
                             <th><label>Enter password:</label></th>
-                            <td><input type="password" name="password" minlength="8" required></td>
+                            <td><input type="password" name="password" minlength="4" maxlength="4" required title="Enter valid password"></td>
                         </tr>
                         <tr style="text-align: center;">
-                            <td colspan="2"><input type="submit" value="Login" name="submit" id="button">
+                            <td colspan="2"><input type="submit" value="Login" name="submit" id="button" onclick="window.location.href='Home.jsp'">
                             <input type="Reset" value="Reset" name="Reset" id="button">
                             <input type="submit" value="Back" name="back" id="button" onclick="window.location.href='index.jsp'"></td>
                         </tr>

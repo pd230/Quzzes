@@ -27,14 +27,9 @@ public class CheckUser {
 			query.setParameter("password", password);
 
 			List<Object[]> list = query.list();
-
-			tx.commit();
 			return list!=null && !list.isEmpty();
-	
+
 	}catch(Exception e){
-		if(tx!=null) {
-			tx.rollback();
-		}
 		e.printStackTrace();
 		return false;
 	}

@@ -17,23 +17,23 @@
                 <form id="form1" action="SignIn">
                     <table>
                         <tr>
-                            <th><label>Enter Fullname:</label></th>
+                            <th><label>Enter Fullname :</label></th>
                             <td><input type="text" name="fname"  required pattern="[A-za-z\s]+" title="only alphabates"></td>
                         </tr>
                         <tr>
-                            <th><label>Enter Email:</label></th>
+                            <th><label>Enter Email :</label></th>
                             <td><input type="email" name="email" required></td>
                         </tr>
                         <tr>
-                            <th><label>Enter Username:</label></th>
+                            <th><label>Enter Username :</label></th>
                             <td><input type="text" name="Uname" required></td>
                         </tr>
                         <tr>
-                            <th><label>Enter password:</label></th>
-                            <td><input type="password" name="password" minlength="8" maxlength="8" required></td>
+                            <th><label>Enter password :</label></th>
+                            <td><input type="password" name="password" minlength="4" maxlength="4" required></td>
                         </tr>
                         <tr style="text-align: center;">
-                            <td colspan="2"><input type="submit" value="SignUp" name="submit" id="button">
+                            <td colspan="2"><input type="submit" value="SignUp" name="submit" id="button" onclick="window.location.href='Home.jsp'">
                             <input type="Reset" value="Reset " name="Reset" id="button">
                             <input type="submit" value="Back" name="back" id="button" onclick="window.location.href='index.jsp'"></td>
                         </tr>

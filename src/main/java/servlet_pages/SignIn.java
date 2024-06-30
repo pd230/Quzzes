@@ -32,9 +32,9 @@ public class SignIn extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		response.setContentType("text/html");
-		PrintWriter pw = response.getWriter();
+//		PrintWriter pw = response.getWriter();
 		
-		HibUtilQuiz hibUtilQuiz = new HibUtilQuiz();
+//		HibUtilQuiz hibUtilQuiz = new HibUtilQuiz();
 		UserData userData = new UserData();
 		Session session = null;
 		

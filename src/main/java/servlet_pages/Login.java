@@ -23,7 +23,7 @@ public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
+//		PrintWriter out = response.getWriter();
 		
 		String Uname = request.getParameter("Uname");
 		String password = request.getParameter("password");
@@ -42,13 +42,14 @@ public class Login extends HttpServlet {
 		HttpSession httpsession = request.getSession();
 		
 		
-//        if(list != null){
-//        	httpsession.setAttribute("Uname", Uname);
-//        	httpsession.setAttribute("password", password);
-//        	response.sendRedirect("Home.jsp");
-//        }else {
-//        	response.sendRedirect("Login.jsp?error=1");
-//        }
+        if(list != null){
+        	httpsession.setAttribute("Uname", Uname);
+        	httpsession.setAttribute("password", password);
+        	response.sendRedirect("Home.jsp");
+        }else {
+        	response.sendRedirect("Login.jsp");
+        }
+        
 		
 	}
 

@@ -1,3 +1,4 @@
+<%@page import="org.hibernate.internal.build.AllowSysOut"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="services.CheckUser" %>
@@ -13,8 +14,9 @@
       String username = (String)session.getAttribute("Uname");
       String password = (String)session.getAttribute("password");
       
-      if(username == null || password == null || !CheckUser.isAvailableInDb(username, password)){
+      if(!CheckUser.isAvailableInDb(username, password)){
     	  response.sendRedirect("Login.jsp");
+    	  out.print("Login error");
       }
 %>
 
