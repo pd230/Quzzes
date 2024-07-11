@@ -1,70 +1,12 @@
 @charset "ISO-8859-1";
 
-*{
-    margin: 0;
-    /* padding : 0; */
-}
-
-body{
-	
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#content{
-    display: inline;
-    gap: 2%;
-    align-items: center;
-}
-
-#name{
-    color:rgb(255, 255, 255);
-    border: black;
-    text-shadow: 5%;
-    font-size: 33vh;
-    font-style: italic;
-    margin-left: 5vh;
-    margin-top: 15vh;
-    text-shadow: 4px 1px 7px black;
-}
-
-#qzTime{
-    margin-left: 60.5vh;
-    /* padding-top: -8; */
-    width: 90vh;
-    font-size:larger;
-    text-shadow: 1px 1px 5px white;
-}
-
-#btn{
-    background-color: white;
-    display: flex;
-    height: 7vh;
-    width: 25vh;
-    margin-left: 62vh;  
-    border-right: none; 
-    border-top-left-radius: 8vh;
-    border-bottom-left-radius: 8vh;
-}
-
 #btn1{
-    width: 250px;
-    font-size:medium;
-     background-color: black;
-     color: white; 
-     border-radius: 10px;
+	background-color: black;
+}
 
-}
-#btn2{
-    width: 250px;
-    font-size:medium;
-    color:black;
-     background-color:white;
-     border:none;
-}
 
  #btn1:hover{
-    background-color: rgb(153, 219, 246);;
+    background-color: rgb(3, 202, 252);
     color: black;
     border: 1px white;
  }
