@@ -17,7 +17,6 @@ import java.io.PrintWriter;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-import entity.HibUtilQuiz;
 import entity.UserData;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -25,6 +24,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import services.HibUtilQuiz;
 
 public class SignIn extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -69,9 +69,11 @@ public class SignIn extends HttpServlet {
 		
 		HttpSession httpsession = request.getSession();
 		RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
-		httpsession.setAttribute(Uname, password);
+		httpsession.setAttribute("Uname", Uname);
+		httpsession.setAttribute("password", password);
+		httpsession.setAttribute("email", email);
+		httpsession.setAttribute("name", name);
 		rd.forward(request, response);
-		
 		
 		
 		session.save(userData);

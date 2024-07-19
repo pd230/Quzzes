@@ -1,4 +1,4 @@
-package entity;
+package services;
 
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;

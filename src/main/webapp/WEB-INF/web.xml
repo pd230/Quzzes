@@ -29,5 +29,24 @@
     <servlet-name>SignIn</servlet-name>
     <url-pattern>/SignIn</url-pattern>
   </servlet-mapping>
- 
+  <servlet>
+    <description>this servlet deal with quetions </description>
+    <display-name>Quizz</display-name>
+    <servlet-name>Quizz</servlet-name>
+    <servlet-class>servlet_pages.Quizz</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Quizz</servlet-name>
+    <url-pattern>/Quizz</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>This file contains all the quetions</description>
+    <display-name>MyQuestions</display-name>
+    <servlet-name>MyQuestions</servlet-name>
+    <servlet-class>servlet_pages.MyQuestions</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MyQuestions</servlet-name>
+    <url-pattern>/MyQuestions</url-pattern>
+  </servlet-mapping>
 </web-app>

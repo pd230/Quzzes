@@ -47,5 +47,6 @@
                <img src="images/admin.png" style="height: 300px; column-gap: 0; margin-left: -100px; margin-top: 60px;">
             </div>
    </div>
+   
 </body>
 </html>

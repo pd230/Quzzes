@@ -6,8 +6,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
-import entity.HibUtilQuiz;
-
 public class CheckUser {
 
 	public static boolean isAvailableInDb(String Uname, String password) {

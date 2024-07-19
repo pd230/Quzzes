@@ -16,15 +16,16 @@
 
       <!-- for validate user -->
 
-<%-- <% 
+<% 
       String username = (String)session.getAttribute("Uname");
       String password = (String)session.getAttribute("password");
+    		  
+    		  if(!CheckUser.isAvailableInDb(username, password)){
+    	    	  response.sendRedirect("Login.jsp");
+    	    	  out.print("Login error");
+    	      }
       
-      if(!CheckUser.isAvailableInDb(username, password)){
-    	  response.sendRedirect("Login.jsp");
-    	  out.print("Login error");
-      }
-%>  --%>
+%>
 
       <!-- complete home page UI  -->
       
@@ -46,7 +47,7 @@
         </div>
 
         <!-- Content Section -->
-        <div id="content" class="flex-1 w-full flex flex-row mt-8 space-x-4 justify-center items-center -ml-4">
+        <div id="content" class="flex-1 w-full flex flex-row  space-x-4 justify-center items-center -ml-4">
             <div class="h-5/6 w-1/5 flex flex-col items-center justify-center">
                 <div class=" h-5/6 w-3/4 flex flex-col space-y-14 items-center justify-center ">
 
@@ -69,21 +70,20 @@
                     <div class="h-1/6 w-4/5 flex flex-col items-center justify-center rounded-xl shadow-lg shadow-stone-900 py-1"
                         style="background-color: rgb(193, 213, 114);">
                         <i class="fa-brands fa-squarespace"></i>
-                        <a href="">Attend Quizz</a>
+                        <a href="QuetionsDemo.jsp">Attend Quizz</a>
                     </div>
                 </div>
 
             </div>
 
 
-            <div class="h-5/6 w-3/4 flex items-center justify-center" id="content2">
-                <!-- <iframe id="content2" name="content-frame" class="external-content" src=""></iframe> -->
+            <div class="h-5/6 w-3/4 flex items-center justify-center" id="content2" style="overflow: auto; height: 700px; width: 1000px;">
                 <img src="images/bg1.jpg" class="h-fit w-full opacity-70" alt="">
             </div>
         </div>
 
 
-        <div class="h-60 w-full flex flex-col items-center justify-center mt-10 bg-opacity-10 " id="aboutUs">
+        <div class="h-60 w-full flex flex-col items-center justify-center mt-5 bg-opacity-10 mb-8" id="aboutUs">
             <label class="font-serif font-bold text-3xl" style="color: rgb(170, 145, 5);">Welcome to QuizMaster!<br></label><hr class="border-t-2 border-blue-500 mb-2">
             <lable class="text-sm">
                 At QuizMaster, we believe that learning should be both fun and engaging. Our mission is to provide a
@@ -144,7 +144,6 @@
            <label class="text-sm font-mono">@COPYRIGHT</label>
         </div>
     </div>
-    
-    
+
 </body>
 </html>
