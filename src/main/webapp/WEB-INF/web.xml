@@ -49,4 +49,14 @@
     <servlet-name>MyQuestions</servlet-name>
     <url-pattern>/MyQuestions</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddQues</display-name>
+    <servlet-name>AddQues</servlet-name>
+    <servlet-class>servlet_pages.AddQues</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddQues</servlet-name>
+    <url-pattern>/AddQues</url-pattern>
+  </servlet-mapping>
 </web-app>

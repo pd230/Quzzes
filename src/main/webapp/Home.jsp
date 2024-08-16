@@ -70,7 +70,7 @@
                     <div class="h-1/6 w-4/5 flex flex-col items-center justify-center rounded-xl shadow-lg shadow-stone-900 py-1"
                         style="background-color: rgb(193, 213, 114);">
                         <i class="fa-brands fa-squarespace"></i>
-                        <a href="QuetionsDemo.jsp">Attend Quizz</a>
+                        <a href="MyQuestions">Attend Quizz</a>
                     </div>
                 </div>
 

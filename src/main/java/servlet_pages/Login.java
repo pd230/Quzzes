@@ -24,16 +24,15 @@ public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
+		
 		
 		String Uname = request.getParameter("Uname");
 		String password = request.getParameter("password");
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
+		
 		
 		
 		Session session = HibUtilQuiz.getSessionFactory().openSession();
-		Transaction tx = session.getTransaction();
+		session.getTransaction();
 		
 		String sql = " from UserData where Uname = :Uname and password = :password";
 		Query query = session.createQuery(sql);
@@ -56,7 +55,7 @@ public class Login extends HttpServlet {
       
         	response.sendRedirect("Home.jsp");
         }else {
-        	response.sendRedirect("Login.jsp");
+        	response.sendRedirect("Login.jsp?error=true");
         }
         
 		

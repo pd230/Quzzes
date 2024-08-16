@@ -2,14 +2,16 @@ package entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "QueDemo")
 public class QueDemo {
 	
 	@Id
-	int qid;
-    String question, option1, option2,option3, option4;
-    String answer, category,type;
+	public int qid;
+	public String question, option1, option2,option3, option4;
+	public String answer, category,type;
 	public int getQid() {
 		return qid;
 	}

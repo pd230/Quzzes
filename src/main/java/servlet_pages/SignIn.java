@@ -67,12 +67,8 @@ public class SignIn extends HttpServlet {
 		userData.setUname(Uname);
 		userData.setPassword(password);
 		
-		HttpSession httpsession = request.getSession();
-		RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
-		httpsession.setAttribute("Uname", Uname);
-		httpsession.setAttribute("password", password);
-		httpsession.setAttribute("email", email);
-		httpsession.setAttribute("name", name);
+//		HttpSession httpsession = request.getSession(false);
+		RequestDispatcher rd = request.getRequestDispatcher("Login.jsp");
 		rd.forward(request, response);
 		
 		
