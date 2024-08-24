@@ -7,23 +7,18 @@
 </head>
 <body>
 
-<form class="bg-white shadow-md rounded p-20 mt-8">
-    <label class="mb-2 text-bold" title="label"><strong>Select Language:</strong></label>
-    <input type="radio" name="lang"> JAVA
-    <input type="radio" name="lang"> PYTHON<br><br>
+<form class="bg-white shadow-md rounded p-20 mt-8 flex flex-col" method="get" action="MyQuestions">
+    <div><label class="mb-2 text-bold" title="label"><strong>Select Technology :</strong></label></div>
+    <div><input type="radio" name="lang" value="Java"> Java</div>
+    <div><input type="radio" name="lang" value="HTML"> HTML</div>
+    <div><input type="radio" name="lang" value="CSS"> CSS</div>
+    <div><input type="radio" name="lang" value="JavaScript"> JavaScript</div>
+    <div><input type="radio" name="lang" value="Spring"> Spring</div>
+    <!-- <div><input type="radio" name="lang" value="FullStack"> FullStack(Contain All Above Languages)</div> -->
     
-    <label class="mb-2" title="time"><strong>Select Time:</strong></label>
-    <input type="radio" name="time"> 5 min
-    <input type="radio" name="time"> 10 min
-    <input type="radio" name="time"> 15 min
-    <input type="radio" name="time"> 20 min<br><br>
-
-    <label class="mb-2" title="level"><strong>Select Quizz level:</strong></label>
-    <input type="radio" name="level"> begginner
-    <input type="radio" name="level"> Intermidiate
-    <input type="radio" name="level"> Hard<br><br>
-
-    <button type="submit" class="bg-blue-500 text-white p-2 rounded">Create Quiz</button>
+    <div class="mt-5 flex justify-center">
+    <input id="QuizBtn" type="submit" class="bg-blue-500 text-white p-2 rounded w-fit px-2">Create Quiz</a>
+    </div>
 </form>
 
 </body>

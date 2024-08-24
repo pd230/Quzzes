@@ -13,7 +13,7 @@ public class QuizService {
         queDemoDAO = new QueDemoDAO();
     }
 
-    public List<QueDemo> getQuestions() {
+    public List<Object[]> getQuestions() {
         return queDemoDAO.getAllQuestions();
     }
 }

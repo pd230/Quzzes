@@ -59,4 +59,24 @@
     <servlet-name>AddQues</servlet-name>
     <url-pattern>/AddQues</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CheckUserScore</display-name>
+    <servlet-name>CheckUserScore</servlet-name>
+    <servlet-class>servlet_pages.CheckUserScore</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckUserScore</servlet-name>
+    <url-pattern>/CheckUserScore</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TypeHandler</display-name>
+    <servlet-name>TypeHandler</servlet-name>
+    <servlet-class>servlet_pages.TypeHandler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TypeHandler</servlet-name>
+    <url-pattern>/TypeHandler</url-pattern>
+  </servlet-mapping>
 </web-app>
