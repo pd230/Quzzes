@@ -1,33 +1,30 @@
 @charset "ISO-8859-1";
 
-*{
-    margin: 0;
+
+
+body{
+    height: 100%;
+    width: 100%;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-html, body{
-    height: 100%;
-    display: inline;
-    justify-content: center;
-    align-items: center;
-}
-
-#form{
-    height: 100%;
+#form {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -60px;
+    flex-direction: column;
+    align-items: center; /* Optional: centers form + image */
+    border-radius:5px;
 }
-
 #form1{
     font-style: italic;
     display: flex;
     background-color: rgb(63, 192, 244);
     justify-content: center;
     text-align: left;
-    height: auto;
+    
     width: auto;
-    padding: 30px;
+    
 }
 
 table{
@@ -35,15 +32,18 @@ table{
     width: 350px;
 }
 
-#labels{
+#labels {
     color: rgb(17, 9, 109);
-    font-style: italic;
-    margin-top: 50px;
-    font-style: roboto;
-    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 24px;
     text-align: center;
-    background-image: -webkit-linear-gradient(right,white,rgb(151, 239, 239),white);
+    margin-top: 10%;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, white, rgb(151, 239, 239), white);
+    padding: 30px;
+    border-radius: 10px;
 }
+
 
 #button{
     height: 30px;

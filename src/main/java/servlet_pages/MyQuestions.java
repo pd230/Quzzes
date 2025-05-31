@@ -3,6 +3,7 @@ package servlet_pages;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 import org.hibernate.Session;
 
@@ -40,18 +41,21 @@ public class MyQuestions extends HttpServlet {
         	
         	System.out.println("list of Questions : ");
         	
-        	for(Object[] selected : SelectedTypeQue) {
-        		System.out.println(selected[7]+" "+selected[1]+" "+selected[5]);
+        	for(Object[] arr : dataList) {
+        	    typeToComp = (String) arr[5]; // category
+        	    if(type.equals(typeToComp)) {
+        	        SelectedTypeQue.add(arr);
+        	    }
         	}
-        	
-        	
-        	
-           // Store data in session
-           HttpSession httpsession = request.getSession();
-           httpsession.setAttribute("type", type);
-           httpsession.setAttribute("SelectedTypeQue", SelectedTypeQue);
-           response.sendRedirect("QuetionsDemo.jsp");
-           
+
+        	// Shuffle the selected questions
+        	Collections.shuffle(SelectedTypeQue);
+
+        	// Store data in session
+        	HttpSession httpsession = request.getSession();
+        	httpsession.setAttribute("type", type);
+        	httpsession.setAttribute("SelectedTypeQue", SelectedTypeQue);
+        	response.sendRedirect("QuetionsDemo.jsp");
            } finally {
 //           factory.close();
            }

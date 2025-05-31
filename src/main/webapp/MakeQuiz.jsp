@@ -17,7 +17,7 @@
     <!-- <div><input type="radio" name="lang" value="FullStack"> FullStack(Contain All Above Languages)</div> -->
     
     <div class="mt-5 flex justify-center">
-    <input id="QuizBtn" type="submit" class="bg-blue-500 text-white p-2 rounded w-fit px-2">Create Quiz</a>
+    <input id="QuizBtn" type="submit" class="bg-blue-500 text-white p-2 rounded w-fit px-2">
     </div>
 </form>
 

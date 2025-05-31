@@ -30,7 +30,6 @@ public class Login extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		
-		
 		Session session = HibUtilQuiz.getSessionFactory().openSession();
 		session.getTransaction();
 		
@@ -52,6 +51,7 @@ public class Login extends HttpServlet {
              httpsession.setAttribute("password", password);
              httpsession.setAttribute("name", user.getName());
              httpsession.setAttribute("email", user.getEmail());
+             httpsession.setAttribute("Uid", user.getId());
       
         	 response.sendRedirect("Home.jsp");
         }else {

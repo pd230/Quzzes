@@ -12,12 +12,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" 
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <title>QuizMaster</title>
 </head>
 <body>
-<div class="w-full  flex flex-col h-screen w-full">
+<div class="w-full  flex flex-col h-screen">
     <div id="header" class="w-full h-13 flex gap-40 items-center" style="background-color: rgb(34,211,238 );">
             <div class="ml-16 text-white font-serif w-1/2 pr-11" style="font-size:2rem; font-family:system-ui">
                 <i class="fa-brands fa-slack"></i><label>QuizMaster</label>
@@ -33,7 +34,7 @@
             </div>
         </div>
     
-    <div id="main" class="mt-20 w-fit h-fit flex flex-row h-full">
+    <div id="main" class="mt-20 mb-10 w-fit h-fit flex flex-row h-full" >
         <div id="content" class="ml-20 flex flex-col justify-center items-center w-1/2 h-full " >
             <div id="name">
                 <label class="text-9xl font-serif" style="color: rgb(170, 145, 5); ">QuizMaster</label><br>
@@ -54,8 +55,11 @@
     </div>
     </div>
     
-    <div class="h-60 w-full flex flex-col items-center justify-center mt-20 bg-opacity-10 mb-8" id="aboutUs">
+    <div class="h-90 w-full flex flex-col items-center justify-center mt-10 bg-opacity-10 mb-10" id="aboutUs" >
             <label class="font-serif font-bold text-5xl" style="color: rgb(170, 145, 5);">Welcome to QuizMaster!<br></label><hr class="border-t-2 border-blue-500 mb-2">
+            <div class="w-full flex flex-row mt-90" style="background-color: rgb(136, 222, 227);">
+            <img src="images/girls1.JPG">
+            <div class=" flex flex-col items-center mt-20 ml-20">
             <lable class="text-lg">
                 At QuizMaster, we believe that learning should be both fun and engaging. Our mission is to provide a
                 dynamic platform <br>  where users can test their knowledge,
@@ -68,15 +72,19 @@
             <label class="text-lg">Whether you're a trivia enthusiast, a student preparing for exams, Interviews QuizMaster
                 is the perfect place for you. Join<br> our community today and start your journey towards becoming a quiz
                 master!</label>
+                </div>
+              </div>
         </div>
 
-        <div class="h-fit w-full flex flex-row items-center justify-between  mt-10" id="aboutUs"
-            style="background-color: rgb(34,211,238); ">
-            <Label class="ml-20">Get Connect with us on Social networks!</Label>
-            <label class="mr-20 space-x-10">
-                <i class="fa-brands fa-instagram" style="color: #d60a96;"></i><i class="fa-solid fa-envelope" style="color: #e89805;"></i>
-                <i class="fa-brands fa-facebook" style="color: #215bc0;"></i><i class="fa-brands fa-twitter" style="color: #d81323;"></i>
-                <i class="fa-brands fa-whatsapp" style="color: #1da80b;"></i></label>
+        <div class="h-60 w-full flex flex-col items-center justify-between mb-10" id="aboutUs"
+             >
+            <Label class="">Get Connect with us on Social networks!</Label>
+            <label class="space-x-10  mt-1 text-5xl ">
+                <i class="fa-brands fa-instagram" style="color: #d60a96;"></i>
+                <i class="fa-solid fa-envelope " style="color: #e89805;"></i>
+                <i class="fa-brands fa-facebook " style="color: #215bc0;"></i>
+                <i class="fa-brands fa-twitter " style="color: #d81323;"></i>
+                <i class="fa-brands fa-whatsapp " style="color: #1da80b;"></i></label>
         </div>
 
         <div class="h-60 w-full flex flex-row items-center justify-center space-x-7" id="aboutUs"
@@ -111,7 +119,7 @@
         </div>
 
         <div class="h-8 w-full flex flex-col items-center justify-center" id="aboutUs"
-            style="background-color: rgba(0, 0, 0, 0.652);">
+            style="background-color: rgba(34,211,238);">
            <label class="text-sm font-mono text-white">@COPYRIGHT</label>
         </div>
     </div>

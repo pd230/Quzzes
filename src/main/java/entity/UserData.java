@@ -1,7 +1,14 @@
 package entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class UserData {
@@ -9,6 +16,22 @@ public class UserData {
 	int id;
 	String name , email, password,Uname;
 	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(
+			 name = "userData_scoreData",
+			 joinColumns = @JoinColumn(name = "userData_id"),
+			 inverseJoinColumns = @JoinColumn(name="scoreData_testno")
+			)
+	
+	List<ScoreData> scoreData = new ArrayList<>();
+	
+	
+	public List<ScoreData> getScoreData() {
+		return scoreData;
+	}
+	public void setScoreData(List<ScoreData> scoreData) {
+		this.scoreData = scoreData;
+	}
 	public int getId() {
 		return id;
 	}

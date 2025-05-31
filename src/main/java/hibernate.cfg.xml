@@ -4,11 +4,15 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <!--<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>-->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.connection.password">pd2303</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/QuizzData</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+       <!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/QuizzData</property> -->
+       <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/QuizzData</property>
+        <!--<property name="hibernate.connection.username">root</property> -->
+        <property name="hibernate.connection.username">postgres</property>
+        <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="hibernate.show_sql">true</property>
@@ -19,6 +23,7 @@
         <!-- Annotated classes -->
          <mapping class="entity.UserData"/>
          <mapping class="entity.QueDemo"/>
+         <mapping class="entity.ScoreData"/>
          
         
     </session-factory>
